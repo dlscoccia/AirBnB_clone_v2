@@ -27,6 +27,7 @@ class Place(BaseModel, Base):
     price_by_night = Column(Integer, nullable=False, default=0)
     latitude = Column(Float)
     longitude = Column(Float)
+<<<<<<< HEAD
     if getenv("HBNB_TYPE_STORAGE") == "db":
         print("lola")
         reviews = relationship("Review", backref="user",
@@ -36,6 +37,9 @@ class Place(BaseModel, Base):
     else:
         amenity_ids = []
 
+=======
+    if getenv("HBNB_TYPE_STORAGE") is "file":
+>>>>>>> d14cb4eac210463449936cb6ac89227959c0c28e
         @property
         def cities(self):
             """getter for place"""
